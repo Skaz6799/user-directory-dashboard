@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# User Directory Dashboard
 
-## Getting Started
+A responsive directory built with Next.js and React. It fetches users from the [JSONPlaceholder API](https://jsonplaceholder.typicode.com/users), lets you search by name or email, and opens a Bootstrap modal with each person's contact and address details.
 
-First, run the development server:
+## Features
+
+- Displays each user's name, email, company, and city.
+- Search the directory as you type filtered using name and email.
+- Shows full profile details, including address, phone, and website.
+- Includes loading and error states for the user request.
+
+## Run Locally
+
+Requires Node.js and npm.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+To run a production build locally:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Styling
 
-To learn more about Next.js, take a look at the following resources:
+Bootstrap provides the responsive layout grid and the profile modal. Tailwind utility classes handle component-level styling such as spacing, typography, colors, and hover states; this keeps layout and detail styling responsibilities distinct.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Tailwing and bootstarp are seperated via tailwing.config.js file where  we use prefix: 'tw-',  so for they don't overlap as classes that starts with tw- are tailwing and that do not tsrat with prefix: 'tw-', are of bootstrap
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tech Stack
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js 16 and React 19
+- Bootstrap 5
+- Tailwind CSS 3
